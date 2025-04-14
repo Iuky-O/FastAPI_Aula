@@ -12,7 +12,6 @@ def create_user(user: User):
     return user
 
 
-
 @router.post('/create_user_db', status_code=HTTPStatus.CREATED, response_model=UserPublicDB)
 def create_user_db(user: User):
 
@@ -25,3 +24,4 @@ def create_user_db(user: User):
 @router.get('/get_user_db', response_model=UserList)
 def get_users_db():
     return {'users': database}
+
